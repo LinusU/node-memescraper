@@ -1,0 +1,8 @@
+{
+  "name": "memescraper",
+  "version": "0.1.0",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "html-entities": "^1.0.10"
+  }
+}
