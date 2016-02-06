@@ -1,8 +1,15 @@
 {
   "name": "memescraper",
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "Linus Unnebäck <linus@folkdatorn.se>",
+  "main": "index.js",
   "bin": {
     "memescraper": "bin/memescraper"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/LinusU/fs-xattr.git"
   },
   "scripts": {
     "test": "standard && mocha"
