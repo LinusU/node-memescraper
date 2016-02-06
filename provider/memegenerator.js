@@ -2,6 +2,7 @@
 var request = require('../lib/request');
 
 var generatorMap = {
+     76: 'most-interesting-man',
     303: 'courage-wolf',
   60501: 'bill-lumbergh'
 };
@@ -56,7 +57,14 @@ exports.extractId = function (url) {
     return (m ? m[1] : null);
   }
 
-  return (main() || cdn());
+  function cdn2() {
+    var re = /http:\/\/cdn.meme.am\/instances\/[0-9x]+\/([0-9]+)\.jpg/;
+    var m = re.exec(url);
+
+    return (m ? m[1] : null);
+  }
+
+  return (main() || cdn() || cdn2());
 };
 
 exports.lookup = function (id, cb) {

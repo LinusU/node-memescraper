@@ -12,6 +12,7 @@ var nameMap = {
   'fry not sure if':       'futurama-fry',
   'insanity wolf':         'insanity-wolf',
   'matrix morpheus':       'matrix-morpheus',
+  'most interesting man in the world i don\'t always': 'most-interesting-man',
   'scumbag stacy':         'scumbag-stacy',
   'success kid':           'success-kid',
   'squeamish seal':        'uncomfortable-situation-seal'

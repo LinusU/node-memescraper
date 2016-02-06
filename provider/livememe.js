@@ -36,6 +36,7 @@ var albumMap = {
    743450879: 'and-its-gone',
    796111217: 'futurama-fry',
    835671626: 'yall-got-anymore-of',
+   845318864: 'most-interesting-man',
    855846422: 'too-damn-high',
    865234470: 'drew-carey',
    894520680: 'fuck-me-right',
