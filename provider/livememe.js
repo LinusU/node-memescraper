@@ -1,5 +1,6 @@
 
 var get = require('simple-get');
+var bases = require('bases');
 
 var hasSpecialBackground = [
     32469525,
@@ -73,48 +74,12 @@ var albumMap = {
   2093456784: 'scumbag-steve'
 };
 
-function base36bytesToInt(s) {
-  var v = 0;
-  for (var i = 0; i<s.length; i++) {
-    var ch = s.charCodeAt(i);
-    if (ch>=0x61 && ch<=0x7a) {
-      v = (v*36) + ch + 10-0x61;
-    } else if (ch>=0x41 && ch<=0x5a) {
-      v = (v*36) + ch + 10-0x41;
-    } else if (ch>=0x30 && ch<=0x39) {
-      v = (v*36) + ch - 0x30;
-    }
-  }
-  return v;
-}
-
-function base36intToBytes(a) {
-  if (a == 0) {
-   return "0";
-  }
-  var s = "";
-  var j = 8;
-  var v;
-  while (a > 0 && j > 0) {
-   v = a%36;
-   j--;
-   if (v <= 9) {
-    s = String.fromCharCode(0x30 + v) + s;
-   } else {
-    s = String.fromCharCode(0x61 + v - 10) + s;
-   }
-   a -= v;
-   a /= 36;
-  }
-  return s;
-}
-
 function urlIdToTemplateId (urlId) {
-  var v = base36bytesToInt(urlId);
+  var v = bases.fromBase36(urlId);
   var template_sid = v % 32;
   var w = (v - template_sid) / 32;
 
-  return base36intToBytes(w);
+  return bases.toBase36(w);
 }
 
 function getTemplateData (templateId, cb) {

@@ -5,6 +5,7 @@
     "test": "mocha"
   },
   "dependencies": {
+    "bases": "^0.2.1",
     "cheerio": "^0.17.0",
     "html-entities": "^1.0.10",
     "simple-get": "^1.4.3"
