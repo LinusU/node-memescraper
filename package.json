@@ -2,7 +2,7 @@
   "name": "memescraper",
   "version": "0.1.0",
   "scripts": {
-    "test": "mocha"
+    "test": "standard && mocha"
   },
   "dependencies": {
     "bases": "^0.2.1",
@@ -11,6 +11,7 @@
     "simple-get": "^1.4.3"
   },
   "devDependencies": {
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "standard": "^6.0.1"
   }
 }

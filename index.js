@@ -1,2 +1,1 @@
-
-exports.lookup = require('./lookup');
+exports.lookup = require('./lookup')
