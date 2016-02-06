@@ -22,18 +22,3 @@ function lookup (uri, cb) {
 }
 
 module.exports = exports = lookup
-
-if (require.main === module) {
-  var id = process.argv[2]
-
-  if (!id) {
-    console.log('Usage: node lookup.js <uri>')
-    process.exit(1)
-  }
-
-  lookup(id, function (err, info) {
-    if (err) throw err
-
-    console.log(info)
-  })
-}
