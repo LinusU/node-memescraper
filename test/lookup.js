@@ -3,7 +3,7 @@
 'use strict'
 
 const assert = require('assert')
-const lookup = require('./').lookup
+const lookup = require('../').lookup
 
 const PROVIDERS = [
   'livememe',
@@ -29,7 +29,7 @@ const MEMES = [
   }
 ]
 
-describe('Memescraper', function () {
+describe('Memescraper - lookup', function () {
   for (let meme of MEMES) {
     describe(meme.title, function () {
       for (let provider of PROVIDERS) {
