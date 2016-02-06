@@ -17,7 +17,11 @@ const CASES = [
 
   ['memegenerator', '66806524', 'http://memegenerator.net/instance/66806524'],
   ['memegenerator', '66806524', 'http://cdn.memegenerator.net/instances/400x/66806524.jpg'],
-  ['memegenerator', '66806524', 'http://cdn.meme.am/instances/500x/66806524.jpg']
+  ['memegenerator', '66806524', 'http://cdn.meme.am/instances/500x/66806524.jpg'],
+
+  ['memesdotcom', '869931', 'http://www.memes.com/meme/869931'],
+  ['memesdotcom', '869931', 'http://www.memes.com/m/jtEd'],
+  ['memesdotcom', '869931', 'http://www.memes.com/r/jtEd']
 ]
 
 describe('Memescraper - parse', function () {

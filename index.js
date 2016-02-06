@@ -2,6 +2,7 @@ var livememe = require('./provider/livememe')
 var makeameme = require('./provider/makeameme')
 var memecaptain = require('./provider/memecaptain')
 var memegenerator = require('./provider/memegenerator')
+var memesdotcom = require('./provider/memesdotcom')
 
 exports.parse = function parse (url) {
   var id
@@ -17,6 +18,9 @@ exports.parse = function parse (url) {
 
   id = memegenerator.extractId(url)
   if (id) return { provider: 'memegenerator', id: id }
+
+  id = memesdotcom.extractId(url)
+  if (id) return { provider: 'memesdotcom', id: id }
 
   throw new Error('Unknown url')
 }
