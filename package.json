@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/LinusU/fs-xattr.git"
+    "url": "http://github.com/LinusU/node-memescraper.git"
   },
   "scripts": {
     "test": "standard && mocha"
