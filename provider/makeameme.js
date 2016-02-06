@@ -1,6 +1,6 @@
 
+var get = require('simple-get');
 var cheerio = require('cheerio');
-var request = require('../lib/request');
 var Entities = require('html-entities').AllHtmlEntities;
 
 var htmlEntities = new Entities();
@@ -23,10 +23,10 @@ var nameMap = {
 };
 
 function getHtml (id, cb) {
-  request.get('http://makeameme.org/meme/' + id, function (err, res) {
+  get.concat('http://makeameme.org/meme/' + id, function (err, body) {
     if (err) { return cb(err); }
 
-    cb(null, res.body);
+    cb(null, body.toString());
   });
 }
 

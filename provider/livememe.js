@@ -1,5 +1,5 @@
 
-var request = require('../lib/request');
+var get = require('simple-get');
 
 var hasSpecialBackground = [
     32469525,
@@ -118,10 +118,10 @@ function urlIdToTemplateId (urlId) {
 }
 
 function getTemplateData (templateId, cb) {
-  request.get('http://j1.livememe.com/3113_t' + templateId, function (err, res) {
+  get.concat('http://j1.livememe.com/3113_t' + templateId, function (err, body) {
     if (err) { return cb(err); }
 
-    var m = /setTemplate\(\{\"data\"\: \"([0-9A-F]+)\"\}\)\;/.exec(res.body);
+    var m = /setTemplate\(\{\"data\"\: \"([0-9A-F]+)\"\}\)\;/.exec(body.toString());
 
     if (!m) { return cb(new Error('Failed to parse template data')); }
 

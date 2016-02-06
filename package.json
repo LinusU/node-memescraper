@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "cheerio": "^0.17.0",
-    "html-entities": "^1.0.10"
+    "html-entities": "^1.0.10",
+    "simple-get": "^1.4.3"
   },
   "devDependencies": {
     "mocha": "^2.4.5"

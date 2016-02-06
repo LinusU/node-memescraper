@@ -1,5 +1,5 @@
 
-var request = require('../lib/request');
+var get = require('simple-get');
 
 var generatorMap = {
      76: 'most-interesting-man',
@@ -8,13 +8,13 @@ var generatorMap = {
 };
 
 function getMemeData (id, cb) {
-  request.get('http://version1.api.memegenerator.net/Instance_Select?instanceID=' + id, function (err, res) {
+  get.concat('http://version1.api.memegenerator.net/Instance_Select?instanceID=' + id, function (err, body) {
     if (err) { return cb(err); }
 
     var data;
 
     try {
-      data = JSON.parse(res.body);
+      data = JSON.parse(body.toString());
     } catch (err) {
       return cb(err);
     }
