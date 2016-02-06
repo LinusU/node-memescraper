@@ -1,8 +1,14 @@
 {
   "name": "memescraper",
   "version": "0.1.0",
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "cheerio": "^0.17.0",
     "html-entities": "^1.0.10"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }
